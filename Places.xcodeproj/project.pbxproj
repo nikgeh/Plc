@@ -1,0 +1,437 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		24E1318513E600240064B073 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24E1318413E600240064B073 /* UIKit.framework */; };
+		24E1318713E600240064B073 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24E1318613E600240064B073 /* Foundation.framework */; };
+		24E1318913E600240064B073 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24E1318813E600240064B073 /* CoreGraphics.framework */; };
+		24E1318F13E600240064B073 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 24E1318D13E600240064B073 /* InfoPlist.strings */; };
+		24E1319113E600240064B073 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 24E1319013E600240064B073 /* main.m */; };
+		24E1319513E600240064B073 /* PlacesAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 24E1319413E600240064B073 /* PlacesAppDelegate.m */; };
+		24E1319813E600240064B073 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24E1319613E600240064B073 /* MainWindow.xib */; };
+		24E131A013E600240064B073 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24E1319F13E600240064B073 /* SenTestingKit.framework */; };
+		24E131A113E600240064B073 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24E1318413E600240064B073 /* UIKit.framework */; };
+		24E131A213E600240064B073 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24E1318613E600240064B073 /* Foundation.framework */; };
+		24E131A313E600240064B073 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24E1318813E600240064B073 /* CoreGraphics.framework */; };
+		24E131AB13E600240064B073 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 24E131A913E600240064B073 /* InfoPlist.strings */; };
+		24E131AD13E600240064B073 /* PlacesTests.h in Resources */ = {isa = PBXBuildFile; fileRef = 24E131AC13E600240064B073 /* PlacesTests.h */; };
+		24E131AF13E600240064B073 /* PlacesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 24E131AE13E600240064B073 /* PlacesTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		24E131A413E600240064B073 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 24E1317713E600240064B073 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 24E1317F13E600240064B073;
+			remoteInfo = Places;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		24E1318013E600240064B073 /* Places.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Places.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		24E1318413E600240064B073 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		24E1318613E600240064B073 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		24E1318813E600240064B073 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		24E1318C13E600240064B073 /* Places-Info.plist */ = {isa = PBXFileReference; path = "Places-Info.plist"; sourceTree = "<group>"; };
+		24E1318E13E600240064B073 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		24E1319013E600240064B073 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		24E1319213E600240064B073 /* Places-Prefix.pch */ = {isa = PBXFileReference; path = "Places-Prefix.pch"; sourceTree = "<group>"; };
+		24E1319313E600240064B073 /* PlacesAppDelegate.h */ = {isa = PBXFileReference; path = PlacesAppDelegate.h; sourceTree = "<group>"; };
+		24E1319413E600240064B073 /* PlacesAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlacesAppDelegate.m; sourceTree = "<group>"; };
+		24E1319713E600240064B073 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		24E1319E13E600240064B073 /* PlacesTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlacesTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		24E1319F13E600240064B073 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		24E131A813E600240064B073 /* PlacesTests-Info.plist */ = {isa = PBXFileReference; path = "PlacesTests-Info.plist"; sourceTree = "<group>"; };
+		24E131AA13E600240064B073 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		24E131AC13E600240064B073 /* PlacesTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlacesTests.h; sourceTree = "<group>"; };
+		24E131AE13E600240064B073 /* PlacesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlacesTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		24E1317D13E600240064B073 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				24E1318513E600240064B073 /* UIKit.framework in Frameworks */,
+				24E1318713E600240064B073 /* Foundation.framework in Frameworks */,
+				24E1318913E600240064B073 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		24E1319A13E600240064B073 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				24E131A013E600240064B073 /* SenTestingKit.framework in Frameworks */,
+				24E131A113E600240064B073 /* UIKit.framework in Frameworks */,
+				24E131A213E600240064B073 /* Foundation.framework in Frameworks */,
+				24E131A313E600240064B073 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		24E1317513E600240064B073 = {
+			isa = PBXGroup;
+			children = (
+				24E1318A13E600240064B073 /* Places */,
+				24E131A613E600240064B073 /* PlacesTests */,
+				24E1318313E600240064B073 /* Frameworks */,
+				24E1318113E600240064B073 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		24E1318113E600240064B073 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				24E1318013E600240064B073 /* Places.app */,
+				24E1319E13E600240064B073 /* PlacesTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		24E1318313E600240064B073 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				24E1318413E600240064B073 /* UIKit.framework */,
+				24E1318613E600240064B073 /* Foundation.framework */,
+				24E1318813E600240064B073 /* CoreGraphics.framework */,
+				24E1319F13E600240064B073 /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		24E1318A13E600240064B073 /* Places */ = {
+			isa = PBXGroup;
+			children = (
+				24E1319313E600240064B073 /* PlacesAppDelegate.h */,
+				24E1319413E600240064B073 /* PlacesAppDelegate.m */,
+				24E1319613E600240064B073 /* MainWindow.xib */,
+				24E1318B13E600240064B073 /* Supporting Files */,
+			);
+			path = Places;
+			sourceTree = "<group>";
+		};
+		24E1318B13E600240064B073 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				24E1318C13E600240064B073 /* Places-Info.plist */,
+				24E1318D13E600240064B073 /* InfoPlist.strings */,
+				24E1319013E600240064B073 /* main.m */,
+				24E1319213E600240064B073 /* Places-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		24E131A613E600240064B073 /* PlacesTests */ = {
+			isa = PBXGroup;
+			children = (
+				24E131AC13E600240064B073 /* PlacesTests.h */,
+				24E131AE13E600240064B073 /* PlacesTests.m */,
+				24E131A713E600240064B073 /* Supporting Files */,
+			);
+			path = PlacesTests;
+			sourceTree = "<group>";
+		};
+		24E131A713E600240064B073 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				24E131A813E600240064B073 /* PlacesTests-Info.plist */,
+				24E131A913E600240064B073 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		24E1317F13E600240064B073 /* Places */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 24E131B213E600240064B073 /* Build configuration list for PBXNativeTarget "Places" */;
+			buildPhases = (
+				24E1317C13E600240064B073 /* Sources */,
+				24E1317D13E600240064B073 /* Frameworks */,
+				24E1317E13E600240064B073 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Places;
+			productName = Places;
+			productReference = 24E1318013E600240064B073 /* Places.app */;
+			productType = "com.apple.product-type.application";
+		};
+		24E1319D13E600240064B073 /* PlacesTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 24E131B513E600240064B073 /* Build configuration list for PBXNativeTarget "PlacesTests" */;
+			buildPhases = (
+				24E1319913E600240064B073 /* Sources */,
+				24E1319A13E600240064B073 /* Frameworks */,
+				24E1319B13E600240064B073 /* Resources */,
+				24E1319C13E600240064B073 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				24E131A513E600240064B073 /* PBXTargetDependency */,
+			);
+			name = PlacesTests;
+			productName = PlacesTests;
+			productReference = 24E1319E13E600240064B073 /* PlacesTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		24E1317713E600240064B073 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 24E1317A13E600240064B073 /* Build configuration list for PBXProject "Places" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 24E1317513E600240064B073;
+			productRefGroup = 24E1318113E600240064B073 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				24E1317F13E600240064B073 /* Places */,
+				24E1319D13E600240064B073 /* PlacesTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		24E1317E13E600240064B073 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				24E1318F13E600240064B073 /* InfoPlist.strings in Resources */,
+				24E1319813E600240064B073 /* MainWindow.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		24E1319B13E600240064B073 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				24E131AB13E600240064B073 /* InfoPlist.strings in Resources */,
+				24E131AD13E600240064B073 /* PlacesTests.h in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		24E1319C13E600240064B073 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		24E1317C13E600240064B073 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				24E1319113E600240064B073 /* main.m in Sources */,
+				24E1319513E600240064B073 /* PlacesAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		24E1319913E600240064B073 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				24E131AF13E600240064B073 /* PlacesTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		24E131A513E600240064B073 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 24E1317F13E600240064B073 /* Places */;
+			targetProxy = 24E131A413E600240064B073 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		24E1318D13E600240064B073 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				24E1318E13E600240064B073 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		24E1319613E600240064B073 /* MainWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				24E1319713E600240064B073 /* en */,
+			);
+			name = MainWindow.xib;
+			sourceTree = "<group>";
+		};
+		24E131A913E600240064B073 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				24E131AA13E600240064B073 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		24E131B013E600240064B073 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		24E131B113E600240064B073 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		24E131B313E600240064B073 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Places/Places-Prefix.pch";
+				INFOPLIST_FILE = "Places/Places-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		24E131B413E600240064B073 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Places/Places-Prefix.pch";
+				INFOPLIST_FILE = "Places/Places-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		24E131B613E600240064B073 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Places.app/Places";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Places/Places-Prefix.pch";
+				INFOPLIST_FILE = "PlacesTests/PlacesTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		24E131B713E600240064B073 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Places.app/Places";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Places/Places-Prefix.pch";
+				INFOPLIST_FILE = "PlacesTests/PlacesTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		24E1317A13E600240064B073 /* Build configuration list for PBXProject "Places" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				24E131B013E600240064B073 /* Debug */,
+				24E131B113E600240064B073 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		24E131B213E600240064B073 /* Build configuration list for PBXNativeTarget "Places" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				24E131B313E600240064B073 /* Debug */,
+				24E131B413E600240064B073 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		24E131B513E600240064B073 /* Build configuration list for PBXNativeTarget "PlacesTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				24E131B613E600240064B073 /* Debug */,
+				24E131B713E600240064B073 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 24E1317713E600240064B073 /* Project object */;
+}
