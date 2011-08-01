@@ -6,6 +6,7 @@
 //
 
 #import "FlickrFetcher.h"
+#import "NikFlickrApiKey.h"
 #import "FlickrAPIKey.h"
 #import "JSON.h"
 
