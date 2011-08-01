@@ -7,6 +7,7 @@
 //
 
 #import "PlacesTests.h"
+#import "FlickrFetcher.h"
 
 @implementation PlacesTests
 
@@ -24,9 +25,10 @@
     [super tearDown];
 }
 
-- (void)testExample
+- (void)testFlickrApi
 {
-    STFail(@"Unit tests are not implemented yet in PlacesTests");
+    NSArray *topPlaces = [FlickrFetcher topPlaces];
+    NSLog(@"%@", topPlaces);
 }
 
 @end

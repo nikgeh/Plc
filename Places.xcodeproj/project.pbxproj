@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		240430E313E659B9006E4186 /* FlickrFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 24E131C013E600F00064B073 /* FlickrFetcher.m */; };
+		240430E513E659D1006E4186 /* NSObject+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 24E131C413E600F00064B073 /* NSObject+SBJSON.m */; };
+		240430E613E659D4006E4186 /* NSString+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 24E131C613E600F00064B073 /* NSString+SBJSON.m */; };
+		240430E713E659D7006E4186 /* SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 24E131C813E600F00064B073 /* SBJSON.m */; };
+		240430E813E659DA006E4186 /* SBJsonBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 24E131CA13E600F00064B073 /* SBJsonBase.m */; };
+		240430E913E659DD006E4186 /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 24E131CC13E600F00064B073 /* SBJsonParser.m */; };
+		240430EA13E659DF006E4186 /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 24E131CE13E600F00064B073 /* SBJsonWriter.m */; };
 		24E1318513E600240064B073 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24E1318413E600240064B073 /* UIKit.framework */; };
 		24E1318713E600240064B073 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24E1318613E600240064B073 /* Foundation.framework */; };
 		24E1318913E600240064B073 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24E1318813E600240064B073 /* CoreGraphics.framework */; };
@@ -335,6 +342,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				24E131AF13E600240064B073 /* PlacesTests.m in Sources */,
+				240430E313E659B9006E4186 /* FlickrFetcher.m in Sources */,
+				240430E513E659D1006E4186 /* NSObject+SBJSON.m in Sources */,
+				240430E613E659D4006E4186 /* NSString+SBJSON.m in Sources */,
+				240430E713E659D7006E4186 /* SBJSON.m in Sources */,
+				240430E813E659DA006E4186 /* SBJsonBase.m in Sources */,
+				240430E913E659DD006E4186 /* SBJsonParser.m in Sources */,
+				240430EA13E659DF006E4186 /* SBJsonWriter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
