@@ -15,6 +15,14 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    
+    // Override point for customization after application launch.
+//    WordListTableViewController *wltvc = [[WordListTableViewController alloc] init];
+//    UINavigationController *nav = [[UINavigationController alloc] init];
+//    [nav pushViewController:wltvc animated:NO];
+//    [wltvc release];
+//    [self.window addSubview:nav.view];
+     
     [self.window makeKeyAndVisible];
     return YES;
 }
