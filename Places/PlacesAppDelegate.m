@@ -7,6 +7,7 @@
 //
 
 #import "PlacesAppDelegate.h"
+#import "TopPlacesTableViewController.h"
 
 @implementation PlacesAppDelegate
 
@@ -17,11 +18,11 @@
     // Override point for customization after application launch.
     
     // Override point for customization after application launch.
-//    WordListTableViewController *wltvc = [[WordListTableViewController alloc] init];
-//    UINavigationController *nav = [[UINavigationController alloc] init];
-//    [nav pushViewController:wltvc animated:NO];
-//    [wltvc release];
-//    [self.window addSubview:nav.view];
+    TopPlacesTableViewController *tptvc = [[TopPlacesTableViewController alloc] init];
+    nav = [[UINavigationController alloc] init];
+    [nav pushViewController:tptvc animated:NO];
+    [tptvc release];
+    [self.window addSubview:nav.view];
      
     [self.window makeKeyAndVisible];
     return YES;
@@ -68,6 +69,7 @@
 
 - (void)dealloc
 {
+    [nav release];
     [_window release];
     [super dealloc];
 }

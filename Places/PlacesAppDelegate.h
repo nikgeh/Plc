@@ -8,7 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PlacesAppDelegate : NSObject <UIApplicationDelegate>
+@interface PlacesAppDelegate : NSObject <UIApplicationDelegate> {
+@private 
+    UINavigationController *nav;
+}
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;
 

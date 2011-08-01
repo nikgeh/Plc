@@ -7,15 +7,38 @@
 //
 
 #import "TopPlacesTableViewController.h"
+#import "FlickrFetcher.h"
+
+#define FLICKR_SEPARATOR @", "
+#define PLACES_TITLE @"Places"
+
+@interface TopPlacesTableViewController()
+
+@property (nonatomic, retain, readonly) NSArray *topPlaces;
+
+@end
 
 
 @implementation TopPlacesTableViewController
+
+@synthesize topPlaces;
+
+- (NSArray *)topPlaces 
+{
+    if (!topPlaces) {
+        NSArray *flickrData = [FlickrFetcher topPlaces];
+        NSArray *sortDesc = [NSArray arrayWithObject:[NSSortDescriptor sortDescriptorWithKey:@"_content" ascending:YES]];
+        topPlaces = [[flickrData sortedArrayUsingDescriptors:sortDesc] retain];
+    }
+    return topPlaces;
+}
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
     if (self) {
         // Custom initialization
+        self.title = PLACES_TITLE;
     }
     return self;
 }
@@ -26,6 +49,12 @@
     [super didReceiveMemoryWarning];
     
     // Release any cached data, images, etc that aren't in use.
+}
+
+- (void)dealloc
+{
+    [topPlaces release];
+    [super dealloc];
 }
 
 #pragma mark - View lifecycle
@@ -78,16 +107,27 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 0;
+    // We only have 1 section for the list of top places. 
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 0;
+    return self.topPlaces.count;
+}
+
+- (void)populateCell:(UITableViewCell *)cell forPlaceAtIndexPath:(NSIndexPath *)indexPath
+{
+    // since we only have 1 section, we only need to look at the row
+    NSDictionary *place = [self.topPlaces objectAtIndex:indexPath.row];
+    
+    // TODO (ngeh) put this into a common class
+    NSString *fullNameOfPlace = [place objectForKey:@"_content"];
+    NSArray *placeNames = [fullNameOfPlace componentsSeparatedByString:FLICKR_SEPARATOR];
+    cell.textLabel.text = [placeNames objectAtIndex:0];
+    cell.detailTextLabel.text = fullNameOfPlace;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -96,10 +136,12 @@
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
+        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier] autorelease];
     }
     
     // Configure the cell...
+    [self populateCell:cell forPlaceAtIndexPath:indexPath];
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     
     return cell;
 }

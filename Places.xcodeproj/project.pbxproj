@@ -15,6 +15,7 @@
 		240430E913E659DD006E4186 /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 24E131CC13E600F00064B073 /* SBJsonParser.m */; };
 		240430EA13E659DF006E4186 /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 24E131CE13E600F00064B073 /* SBJsonWriter.m */; };
 		240430F113E65E6C006E4186 /* TopPlacesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 240430F013E65E6C006E4186 /* TopPlacesTableViewController.m */; };
+		240430F613E662A3006E4186 /* FlickrTableCellData.m in Sources */ = {isa = PBXBuildFile; fileRef = 240430F513E662A3006E4186 /* FlickrTableCellData.m */; };
 		24E1318513E600240064B073 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24E1318413E600240064B073 /* UIKit.framework */; };
 		24E1318713E600240064B073 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24E1318613E600240064B073 /* Foundation.framework */; };
 		24E1318913E600240064B073 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24E1318813E600240064B073 /* CoreGraphics.framework */; };
@@ -52,6 +53,8 @@
 		240430D913E65693006E4186 /* NikFlickrApiKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NikFlickrApiKey.h; sourceTree = "<group>"; };
 		240430EF13E65E6C006E4186 /* TopPlacesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopPlacesTableViewController.h; sourceTree = "<group>"; };
 		240430F013E65E6C006E4186 /* TopPlacesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopPlacesTableViewController.m; sourceTree = "<group>"; };
+		240430F413E662A3006E4186 /* FlickrTableCellData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlickrTableCellData.h; sourceTree = "<group>"; };
+		240430F513E662A3006E4186 /* FlickrTableCellData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlickrTableCellData.m; sourceTree = "<group>"; };
 		24E1318013E600240064B073 /* Places.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Places.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		24E1318413E600240064B073 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		24E1318613E600240064B073 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -112,12 +115,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		240430F713E662A9006E4186 /* Table Cell Models */ = {
+			isa = PBXGroup;
+			children = (
+				240430F413E662A3006E4186 /* FlickrTableCellData.h */,
+				240430F513E662A3006E4186 /* FlickrTableCellData.m */,
+			);
+			name = "Table Cell Models";
+			sourceTree = "<group>";
+		};
 		24E1317513E600240064B073 = {
 			isa = PBXGroup;
 			children = (
 				24E1318A13E600240064B073 /* Places */,
-				24E131A613E600240064B073 /* PlacesTests */,
 				24E131BC13E600D20064B073 /* Other Sources */,
+				24E131A613E600240064B073 /* PlacesTests */,
 				24E1318313E600240064B073 /* Frameworks */,
 				24E1318113E600240064B073 /* Products */,
 			);
@@ -146,12 +158,13 @@
 		24E1318A13E600240064B073 /* Places */ = {
 			isa = PBXGroup;
 			children = (
-				24E1319313E600240064B073 /* PlacesAppDelegate.h */,
 				240430EF13E65E6C006E4186 /* TopPlacesTableViewController.h */,
 				240430F013E65E6C006E4186 /* TopPlacesTableViewController.m */,
+				24E1319313E600240064B073 /* PlacesAppDelegate.h */,
 				24E1319413E600240064B073 /* PlacesAppDelegate.m */,
 				24E1319613E600240064B073 /* MainWindow.xib */,
 				24E1318B13E600240064B073 /* Supporting Files */,
+				240430F713E662A9006E4186 /* Table Cell Models */,
 			);
 			path = Places;
 			sourceTree = "<group>";
@@ -340,6 +353,7 @@
 				24E131D413E600F00064B073 /* SBJsonParser.m in Sources */,
 				24E131D513E600F00064B073 /* SBJsonWriter.m in Sources */,
 				240430F113E65E6C006E4186 /* TopPlacesTableViewController.m in Sources */,
+				240430F613E662A3006E4186 /* FlickrTableCellData.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
