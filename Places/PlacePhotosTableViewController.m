@@ -8,9 +8,29 @@
 //
 
 #import "PlacePhotosTableViewController.h"
+#import "FlickrFetcher.h"
+#import "FlickrTableCellData.h"
 
+@interface PlacePhotosTableViewController()
+@property (nonatomic, retain, readonly) NSArray *photos;
+@end
 
 @implementation PlacePhotosTableViewController
+
+@synthesize place;
+
+@synthesize photos;
+
+- (NSArray *)photos
+{
+    if (!photos) {
+        NSString *placeId = [FlickrTableCellData placeId:place];
+        NSArray *flickrData = [FlickrFetcher photosAtPlace:placeId];
+        photos = flickrData;
+        [photos retain];
+    }
+    return photos;
+}
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -27,6 +47,14 @@
     [super didReceiveMemoryWarning];
     
     // Release any cached data, images, etc that aren't in use.
+    [photos release];
+    photos = nil;
+}
+
+- (void)dealloc
+{
+    [photos release];
+    [super dealloc];
 }
 
 #pragma mark - View lifecycle
@@ -79,16 +107,12 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
-    // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
-    // Return the number of rows in the section.
-    return 0;
+    return self.photos.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -97,11 +121,14 @@
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
+        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier] autorelease];
     }
     
     // Configure the cell...
-    
+    FlickrPhotoReference *photo = [self.photos objectAtIndex:indexPath.row];
+    [FlickrTableCellData populateCell:cell forPhotoReference:photo];
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+
     return cell;
 }
 
@@ -148,14 +175,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // Navigation logic may go here. Create and push another view controller.
-    /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     [detailViewController release];
-     */
+    // TODO: Push the PhotoViewController
 }
 
 @end

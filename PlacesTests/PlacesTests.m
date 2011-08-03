@@ -8,6 +8,7 @@
 
 #import "PlacesTests.h"
 #import "FlickrFetcher.h"
+#import "FlickrTableCellData.h"
 
 @implementation PlacesTests
 
@@ -28,7 +29,12 @@
 - (void)testFlickrApi
 {
     NSArray *topPlaces = [FlickrFetcher topPlaces];
-    NSLog(@"%@", topPlaces);
+    //NSLog(@"%@", topPlaces);
+    FlickrPlace *place = [topPlaces objectAtIndex:0];
+    NSString *placeId = [FlickrTableCellData placeId:place];
+    NSLog(@"****Place ID: %@", placeId);
+    NSArray *photos = [FlickrFetcher photosAtPlace:placeId];
+    NSLog(@"%@", photos);
 }
 
 @end

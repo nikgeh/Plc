@@ -8,6 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PlacePhotosTableViewController : UITableViewController
+#import "FlickrTableCellData.h"
+
+@interface PlacePhotosTableViewController : UITableViewController {
+    FlickrPlace *place;
+    
+    @private 
+    NSArray *photos;
+}
+
+@property (retain) FlickrPlace *place;
 
 @end

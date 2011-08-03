@@ -8,6 +8,7 @@
 
 #import "TopPlacesTableViewController.h"
 #import "FlickrFetcher.h"
+#import "PlacePhotosTableViewController.h"
 
 #define FLICKR_SEPARATOR @", "
 #define PLACES_TITLE @"Places"
@@ -189,14 +190,11 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // Navigation logic may go here. Create and push another view controller.
-    /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     [detailViewController release];
-     */
+    PlacePhotosTableViewController *pvc = [[PlacePhotosTableViewController alloc] init];
+    pvc.place = [self.topPlaces objectAtIndex:indexPath.row];
+    // Pass the selected object to the new view controller.
+    [self.navigationController pushViewController:pvc animated:YES];
+    [pvc release];
 }
 
 @end

@@ -18,6 +18,7 @@
 		240430F613E662A3006E4186 /* FlickrTableCellData.m in Sources */ = {isa = PBXBuildFile; fileRef = 240430F513E662A3006E4186 /* FlickrTableCellData.m */; };
 		24175D5E13E90575009C9E31 /* TODO in Resources */ = {isa = PBXBuildFile; fileRef = 24175D5D13E90575009C9E31 /* TODO */; };
 		24175D6213E9072B009C9E31 /* PlacePhotosTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24175D6113E9072B009C9E31 /* PlacePhotosTableViewController.m */; };
+		24175D6313E90CE1009C9E31 /* FlickrTableCellData.m in Sources */ = {isa = PBXBuildFile; fileRef = 240430F513E662A3006E4186 /* FlickrTableCellData.m */; };
 		24E1318513E600240064B073 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24E1318413E600240064B073 /* UIKit.framework */; };
 		24E1318713E600240064B073 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24E1318613E600240064B073 /* Foundation.framework */; };
 		24E1318913E600240064B073 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24E1318813E600240064B073 /* CoreGraphics.framework */; };
@@ -379,6 +380,7 @@
 				240430E813E659DA006E4186 /* SBJsonBase.m in Sources */,
 				240430E913E659DD006E4186 /* SBJsonParser.m in Sources */,
 				240430EA13E659DF006E4186 /* SBJsonWriter.m in Sources */,
+				24175D6313E90CE1009C9E31 /* FlickrTableCellData.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
