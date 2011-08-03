@@ -8,6 +8,7 @@
 //
 
 #import "PlacePhotosTableViewController.h"
+#import "PhotoViewController.h"
 #import "FlickrFetcher.h"
 #import "FlickrTableCellData.h"
 
@@ -175,7 +176,11 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // TODO: Push the PhotoViewController
+    PhotoViewController *pvc = [[PhotoViewController alloc] init];
+    pvc.flickrInfo = [FlickrTableCellData flickrInfo:[self.photos objectAtIndex:indexPath.row]];
+    // Pass the selected object to the new view controller.
+    [self.navigationController pushViewController:pvc animated:YES];
+    [pvc release];
 }
 
 @end

@@ -40,6 +40,7 @@
 		24E131D313E600F00064B073 /* SBJsonBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 24E131CA13E600F00064B073 /* SBJsonBase.m */; };
 		24E131D413E600F00064B073 /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 24E131CC13E600F00064B073 /* SBJsonParser.m */; };
 		24E131D513E600F00064B073 /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 24E131CE13E600F00064B073 /* SBJsonWriter.m */; };
+		24F9C57F13E91D1600B4A7E6 /* PhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24F9C57E13E91D1600B4A7E6 /* PhotoViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,6 +95,8 @@
 		24E131CC13E600F00064B073 /* SBJsonParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonParser.m; sourceTree = "<group>"; };
 		24E131CD13E600F00064B073 /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonWriter.h; sourceTree = "<group>"; };
 		24E131CE13E600F00064B073 /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonWriter.m; sourceTree = "<group>"; };
+		24F9C57D13E91D1600B4A7E6 /* PhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoViewController.h; sourceTree = "<group>"; };
+		24F9C57E13E91D1600B4A7E6 /* PhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +171,8 @@
 				240430F013E65E6C006E4186 /* TopPlacesTableViewController.m */,
 				24175D6013E9072B009C9E31 /* PlacePhotosTableViewController.h */,
 				24175D6113E9072B009C9E31 /* PlacePhotosTableViewController.m */,
+				24F9C57D13E91D1600B4A7E6 /* PhotoViewController.h */,
+				24F9C57E13E91D1600B4A7E6 /* PhotoViewController.m */,
 				24E1319313E600240064B073 /* PlacesAppDelegate.h */,
 				24E1319413E600240064B073 /* PlacesAppDelegate.m */,
 				24E1319613E600240064B073 /* MainWindow.xib */,
@@ -365,6 +370,7 @@
 				240430F113E65E6C006E4186 /* TopPlacesTableViewController.m in Sources */,
 				240430F613E662A3006E4186 /* FlickrTableCellData.m in Sources */,
 				24175D6213E9072B009C9E31 /* PlacePhotosTableViewController.m in Sources */,
+				24F9C57F13E91D1600B4A7E6 /* PhotoViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -52,6 +52,10 @@
 
 #define PHOTO_TITLE @"title"
 #define PHOTO_DESCRIPTION @"description"
+#define PHOTO_FARM @"farm"
+#define PHOTO_SERVER @"server"
+#define PHOTO_ID @"id"
+#define PHOTO_SECRET @"secret"
 
 #define UNKNOWN_TITLE @"Unknown"
 
@@ -77,6 +81,16 @@
     } else {
         cell.textLabel.text = description.length > 0 ? description : UNKNOWN_TITLE;
     }
+}
+
++ (FlickrInfo *)flickrInfo:(FlickrPhotoReference *)photo
+{
+    NSMutableDictionary *flickrInfo = [[[NSMutableDictionary alloc] init] autorelease];
+    [flickrInfo setObject:[photo objectForKey:PHOTO_FARM] forKey:PHOTO_FARM];
+    [flickrInfo setObject:[photo objectForKey:PHOTO_SERVER] forKey:PHOTO_SERVER];
+    [flickrInfo setObject:[photo objectForKey:PHOTO_ID] forKey:PHOTO_ID];
+    [flickrInfo setObject:[photo objectForKey:PHOTO_SECRET] forKey:PHOTO_SECRET];
+    return flickrInfo;
 }
 
 @end

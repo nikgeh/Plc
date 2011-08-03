@@ -10,6 +10,7 @@
 
 typedef NSDictionary FlickrPlace;
 typedef NSDictionary FlickrPhotoReference;
+typedef NSDictionary FlickrInfo;
 
 @interface FlickrTableCellData : NSObject {
 @private 
@@ -20,5 +21,6 @@ typedef NSDictionary FlickrPhotoReference;
 
 + (NSString *)placeId:(FlickrPlace *)place;
 + (void)populateCell:(UITableViewCell *)cell forPhotoReference:(FlickrPhotoReference *)photo;
++ (FlickrInfo *)flickrInfo:(FlickrPhotoReference *)photo;
 
 @end

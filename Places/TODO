@@ -1,10 +1,6 @@
 
 - Refactor API calls in TopPlacesTableViewController.populateCell
 
-- PlacePhotosTableViewController
-- Create PhotoView
-- CreatePhotoViewController
-
 - Support Landscape and Portrait
 
 - Create Tab navigation
