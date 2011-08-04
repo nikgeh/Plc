@@ -10,7 +10,7 @@
 
 @interface PlacesAppDelegate : NSObject <UIApplicationDelegate> {
 @private 
-    UINavigationController *nav;
+    UITabBarController *tbc;
 }
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;

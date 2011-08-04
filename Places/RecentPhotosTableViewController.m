@@ -1,45 +1,23 @@
 //
-//  PlacePhotosTableViewController.m
+//  RecentPhotosTableViewController.m
 //  Places
-//  Displays the photos that belong to a place
 //
-//  Created by NICHOLAS GEH on 8/2/11.
+//  Created by NICHOLAS GEH on 8/3/11.
 //  Copyright 2011 __MyCompanyName__. All rights reserved.
 //
 
-#import "PlacePhotosTableViewController.h"
-#import "PhotoViewController.h"
-#import "FlickrFetcher.h"
-#import "FlickrTableCellData.h"
+#import "RecentPhotosTableViewController.h"
+#define RECENTS_TITLE @"Recent"
 
 
-
-@interface PlacePhotosTableViewController()
-@property (nonatomic, retain, readonly) NSArray *photos;
-@end
-
-@implementation PlacePhotosTableViewController
-
-@synthesize place;
-
-@synthesize photos;
-
-- (NSArray *)photos
-{
-    if (!photos) {
-        NSString *placeId = [FlickrTableCellData placeId:place];
-        NSArray *flickrData = [FlickrFetcher photosAtPlace:placeId];
-        photos = flickrData;
-        [photos retain];
-    }
-    return photos;
-}
+@implementation RecentPhotosTableViewController
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
     if (self) {
         // Custom initialization
+        self.title = RECENTS_TITLE;
     }
     return self;
 }
@@ -50,14 +28,6 @@
     [super didReceiveMemoryWarning];
     
     // Release any cached data, images, etc that aren't in use.
-    [photos release];
-    photos = nil;
-}
-
-- (void)dealloc
-{
-    [photos release];
-    [super dealloc];
 }
 
 #pragma mark - View lifecycle
@@ -103,19 +73,23 @@
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     // Return YES for supported orientations
-    return YES;
+    return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 1;
+#warning Potentially incomplete method implementation.
+    // Return the number of sections.
+    return 0;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return self.photos.count;
+#warning Incomplete method implementation.
+    // Return the number of rows in the section.
+    return 0;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -124,14 +98,11 @@
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier] autorelease];
+        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
     }
     
     // Configure the cell...
-    FlickrPhotoReference *photo = [self.photos objectAtIndex:indexPath.row];
-    [FlickrTableCellData populateCell:cell forPhotoReference:photo];
-    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-
+    
     return cell;
 }
 
@@ -178,11 +149,14 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    PhotoViewController *pvc = [[PhotoViewController alloc] init];
-    pvc.flickrInfo = [FlickrTableCellData flickrInfo:[self.photos objectAtIndex:indexPath.row]];
-    // Pass the selected object to the new view controller.
-    [self.navigationController pushViewController:pvc animated:YES];
-    [pvc release];
+    // Navigation logic may go here. Create and push another view controller.
+    /*
+     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
+     // ...
+     // Pass the selected object to the new view controller.
+     [self.navigationController pushViewController:detailViewController animated:YES];
+     [detailViewController release];
+     */
 }
 
 @end

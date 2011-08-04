@@ -8,6 +8,7 @@
 
 #import "PlacesAppDelegate.h"
 #import "TopPlacesTableViewController.h"
+#import "RecentPhotosTableViewController.h"
 
 @implementation PlacesAppDelegate
 
@@ -15,14 +16,22 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+    tbc = [[UITabBarController alloc] init];
     
-    // Override point for customization after application launch.
+    UINavigationController *topPlacesNav = [[UINavigationController alloc] init];
     TopPlacesTableViewController *tptvc = [[TopPlacesTableViewController alloc] init];
-    nav = [[UINavigationController alloc] init];
-    [nav pushViewController:tptvc animated:NO];
+    [topPlacesNav pushViewController:tptvc animated:NO];
     [tptvc release];
-    [self.window addSubview:nav.view];
+
+    UINavigationController *recentPhotosNav = [[UINavigationController alloc] init];
+    RecentPhotosTableViewController *rptvc = [[RecentPhotosTableViewController alloc] init];
+    [recentPhotosNav pushViewController:rptvc animated:NO];
+    [rptvc release];
+
+    
+    NSArray* controllers = [NSArray arrayWithObjects:topPlacesNav, recentPhotosNav, nil];
+    tbc.viewControllers = controllers;
+    [self.window addSubview:tbc.view];
      
     [self.window makeKeyAndVisible];
     return YES;
@@ -69,7 +78,7 @@
 
 - (void)dealloc
 {
-    [nav release];
+    [tbc release];
     [_window release];
     [super dealloc];
 }

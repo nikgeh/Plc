@@ -1,9 +1,9 @@
 
 - Refactor API calls in TopPlacesTableViewController.populateCell
 
-- Support Landscape and Portrait
-
 - Create Tab navigation
 - Create recents property list
 
 - Create RecentPhotosTableViewController
+
+- network spinner
