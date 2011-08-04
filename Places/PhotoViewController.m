@@ -74,10 +74,38 @@
     scrollView.minimumZoomScale = 0.3;
     scrollView.maximumZoomScale = 3.0;
     scrollView.delegate = self;
+    scrollView.backgroundColor = [UIColor blackColor];
     self.view = scrollView;
     [scrollView release];
 }
 
+// Taken from http://neocaine.blogspot.com/2011/06/uiscrollview-zoom-subviews-to-center.html
+- (CGRect)centeredFrameForScrollView:(UIScrollView *)scroll andUIView:(UIView *)rView {
+    CGSize boundsSize = scroll.bounds.size;
+    CGRect frameToCenter = rView.frame;
+    // center horizontally
+    if (frameToCenter.size.width < boundsSize.width) {
+        frameToCenter.origin.x = (boundsSize.width - frameToCenter.size.width) / 2;
+        
+    }
+    else {
+        frameToCenter.origin.x = 0;
+    }
+    // center vertically
+    if (frameToCenter.size.height < boundsSize.height) {
+        frameToCenter.origin.y = (boundsSize.height - frameToCenter.size.height) / 2;
+    }
+    else {
+        frameToCenter.origin.y = 0;
+    }
+    return frameToCenter;
+}
+
+- (void)zoomToPictureSize
+{
+    UIScrollView *scrollView = (UIScrollView *)self.view;
+    [scrollView zoomToRect:self.imageView.bounds animated:NO];
+}
 
 /*
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
@@ -87,12 +115,30 @@
 }
 */
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+
+    // Resize photo to fit in the scroll view
+    [self zoomToPictureSize];    
+}
+
 - (void)viewDidUnload
 {
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
     self.imageView = nil;
+}
+
+- (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation
+{
+    [super didRotateFromInterfaceOrientation:fromInterfaceOrientation];
+    
+    // When we rotate the device, we want to ensure that the image stays centered, if there is
+    // any white space around the sides.
+    self.imageView.frame = [self centeredFrameForScrollView:(UIScrollView *)self.view 
+                                                  andUIView:self.imageView];    
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -107,5 +153,8 @@
     return self.imageView;
 }
 
+- (void)scrollViewDidZoom:(UIScrollView *)scrollView { 
+    self.imageView.frame = [self centeredFrameForScrollView:scrollView andUIView:self.imageView];
+}
 
 @end
