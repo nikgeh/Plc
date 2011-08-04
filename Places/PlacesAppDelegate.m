@@ -9,6 +9,7 @@
 #import "PlacesAppDelegate.h"
 #import "TopPlacesTableViewController.h"
 #import "RecentPhotosTableViewController.h"
+#import "PlacesTabBarController.h"
 
 @implementation PlacesAppDelegate
 
@@ -16,23 +17,30 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    tbc = [[UITabBarController alloc] init];
+    tbc = [[PlacesTabBarController alloc] init];
     
     UINavigationController *topPlacesNav = [[UINavigationController alloc] init];
     TopPlacesTableViewController *tptvc = [[TopPlacesTableViewController alloc] init];
     [topPlacesNav pushViewController:tptvc animated:NO];
+    topPlacesNav.tabBarItem = [[[UITabBarItem alloc] 
+                                initWithTabBarSystemItem:UITabBarSystemItemTopRated tag:0] autorelease];
     [tptvc release];
 
     UINavigationController *recentPhotosNav = [[UINavigationController alloc] init];
     RecentPhotosTableViewController *rptvc = [[RecentPhotosTableViewController alloc] init];
     [recentPhotosNav pushViewController:rptvc animated:NO];
+    recentPhotosNav.tabBarItem = [[[UITabBarItem alloc] 
+                                initWithTabBarSystemItem:UITabBarSystemItemMostRecent tag:0] autorelease];
     [rptvc release];
 
     
     NSArray* controllers = [NSArray arrayWithObjects:topPlacesNav, recentPhotosNav, nil];
     tbc.viewControllers = controllers;
+    
+    [topPlacesNav release];
+    [recentPhotosNav release];
+    
     [self.window addSubview:tbc.view];
-     
     [self.window makeKeyAndVisible];
     return YES;
 }

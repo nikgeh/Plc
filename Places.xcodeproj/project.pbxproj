@@ -20,6 +20,7 @@
 		24175D6213E9072B009C9E31 /* PlacePhotosTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24175D6113E9072B009C9E31 /* PlacePhotosTableViewController.m */; };
 		24175D6313E90CE1009C9E31 /* FlickrTableCellData.m in Sources */ = {isa = PBXBuildFile; fileRef = 240430F513E662A3006E4186 /* FlickrTableCellData.m */; };
 		243E352E13EA6B1A0040618D /* RecentPhotosTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 243E352D13EA6B1A0040618D /* RecentPhotosTableViewController.m */; };
+		243E353213EA75040040618D /* PlacesTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 243E353113EA75040040618D /* PlacesTabBarController.m */; };
 		24E1318513E600240064B073 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24E1318413E600240064B073 /* UIKit.framework */; };
 		24E1318713E600240064B073 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24E1318613E600240064B073 /* Foundation.framework */; };
 		24E1318913E600240064B073 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24E1318813E600240064B073 /* CoreGraphics.framework */; };
@@ -65,6 +66,8 @@
 		24175D6113E9072B009C9E31 /* PlacePhotosTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlacePhotosTableViewController.m; sourceTree = "<group>"; };
 		243E352C13EA6B1A0040618D /* RecentPhotosTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecentPhotosTableViewController.h; sourceTree = "<group>"; };
 		243E352D13EA6B1A0040618D /* RecentPhotosTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecentPhotosTableViewController.m; sourceTree = "<group>"; };
+		243E353013EA75040040618D /* PlacesTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlacesTabBarController.h; sourceTree = "<group>"; };
+		243E353113EA75040040618D /* PlacesTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlacesTabBarController.m; sourceTree = "<group>"; };
 		24E1318013E600240064B073 /* Places.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Places.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		24E1318413E600240064B073 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		24E1318613E600240064B073 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -184,6 +187,8 @@
 				24E1318B13E600240064B073 /* Supporting Files */,
 				240430F713E662A9006E4186 /* Table Cell Models */,
 				24175D5D13E90575009C9E31 /* TODO */,
+				243E353013EA75040040618D /* PlacesTabBarController.h */,
+				243E353113EA75040040618D /* PlacesTabBarController.m */,
 			);
 			path = Places;
 			sourceTree = "<group>";
@@ -377,6 +382,7 @@
 				24175D6213E9072B009C9E31 /* PlacePhotosTableViewController.m in Sources */,
 				24F9C57F13E91D1600B4A7E6 /* PhotoViewController.m in Sources */,
 				243E352E13EA6B1A0040618D /* RecentPhotosTableViewController.m in Sources */,
+				243E353213EA75040040618D /* PlacesTabBarController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
