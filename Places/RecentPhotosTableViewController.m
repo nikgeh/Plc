@@ -7,10 +7,25 @@
 //
 
 #import "RecentPhotosTableViewController.h"
+#import "RecentPhotosUserDefaults.h"
+#import "FlickrTableCellData.h"
+#import "PhotoViewController.h"
+
 #define RECENTS_TITLE @"Recent"
 
+@interface RecentPhotosTableViewController()
+@property (readonly) NSArray *recentPhotos;
+@end
 
 @implementation RecentPhotosTableViewController
+
+- (NSArray *)recentPhotos
+{
+    if (!recentPhotos) {
+        recentPhotos = [[RecentPhotosUserDefaults recentPhotosForUser] retain];
+    }
+    return recentPhotos;
+}
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -28,6 +43,12 @@
     [super didReceiveMemoryWarning];
     
     // Release any cached data, images, etc that aren't in use.
+}
+
+- (void)dealloc
+{
+    [recentPhotos release];
+    [super dealloc];
 }
 
 #pragma mark - View lifecycle
@@ -73,23 +94,20 @@
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     // Return YES for supported orientations
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
+    return YES;
 }
 
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
-    // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 0;
+    return self.recentPhotos.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -98,10 +116,13 @@
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
+        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier] autorelease];
     }
     
     // Configure the cell...
+    FlickrPhotoReference *photo = [self.recentPhotos objectAtIndex:indexPath.row];
+    [FlickrTableCellData populateCell:cell forPhotoReference:photo];
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     
     return cell;
 }
@@ -149,14 +170,14 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // Navigation logic may go here. Create and push another view controller.
-    /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     [detailViewController release];
-     */
+    FlickrPhotoReference *photoReference = [self.recentPhotos objectAtIndex:indexPath.row];
+    [RecentPhotosUserDefaults updateRecentPhotos:photoReference];
+    
+    PhotoViewController *pvc = [[PhotoViewController alloc] init];
+    pvc.flickrInfo = photoReference;
+    // Pass the selected object to the new view controller.
+    [self.navigationController pushViewController:pvc animated:YES];
+    [pvc release];
 }
 
 @end

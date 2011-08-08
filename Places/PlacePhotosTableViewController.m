@@ -11,7 +11,7 @@
 #import "PhotoViewController.h"
 #import "FlickrFetcher.h"
 #import "FlickrTableCellData.h"
-
+#import "RecentPhotosUserDefaults.h"
 
 
 @interface PlacePhotosTableViewController()
@@ -178,8 +178,11 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    FlickrPhotoReference *photoReference = [self.photos objectAtIndex:indexPath.row];
+    [RecentPhotosUserDefaults updateRecentPhotos:photoReference];
+    
     PhotoViewController *pvc = [[PhotoViewController alloc] init];
-    pvc.flickrInfo = [FlickrTableCellData flickrInfo:[self.photos objectAtIndex:indexPath.row]];
+    pvc.flickrInfo = photoReference;
     // Pass the selected object to the new view controller.
     [self.navigationController pushViewController:pvc animated:YES];
     [pvc release];

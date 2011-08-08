@@ -7,17 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@class FlickrInfo;
+#import "FlickrDataModels.h"
 
 @interface PhotoViewController : UIViewController <UIScrollViewDelegate> {
-    FlickrInfo *flickrInfo;
+    FlickrPhotoReference *flickrInfo;
     
     @private 
     NSData *photoData;
     UIImageView *imageView;
 }
 
-@property (retain) FlickrInfo *flickrInfo;
+@property (retain) FlickrPhotoReference *flickrInfo;
 
 @end

@@ -1,9 +1,22 @@
 
-- Refactor API calls in TopPlacesTableViewController.populateCell
-
-- Create Tab navigation
 - Create recents property list
+  - recent PHOTOS
+  - no dupes
+  - most recent at top
+  - Limit recents to a reasonable number
+  - save in NSUserDefaults
 
 - Create RecentPhotosTableViewController
 
 - network spinner
+  - networkActivityIndicatorVisible property in [UIApplication sharedApplication]
+
+- support ipad
+
+- Photos should have title
+
+- When navigating to Photos, should hide the tab controller
+
+- Refactor API calls in TopPlacesTableViewController.populateCell
+
+- Refactor to combine common code between RecentPhotosTableViewController and PlacePhotosTableViewController

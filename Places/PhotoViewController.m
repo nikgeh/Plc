@@ -7,9 +7,8 @@
 //
 
 #import "PhotoViewController.h"
-
-#import "FlickrFetcher.h"
 #import "FlickrTableCellData.h"
+#import "FlickrFetcher.h"
 
 @interface PhotoViewController() 
 @property (nonatomic, retain, readonly) NSData *photoData;
@@ -25,7 +24,8 @@
 - (NSData *)photoData
 {
     if (!photoData) {
-        NSData *data = [FlickrFetcher imageDataForPhotoWithFlickrInfo:(NSDictionary *)self.flickrInfo
+        NSDictionary *info = [FlickrTableCellData flickrInfo:self.flickrInfo];
+        NSData *data = [FlickrFetcher imageDataForPhotoWithFlickrInfo:info
                                                                format:FlickrFetcherPhotoFormatLarge];
         photoData = [data retain];
     }

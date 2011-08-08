@@ -8,9 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-typedef NSDictionary FlickrPlace;
-typedef NSDictionary FlickrPhotoReference;
-typedef NSDictionary FlickrInfo;
+#import "FlickrDataModels.h"
 
 @interface FlickrTableCellData : NSObject {
 @private 
