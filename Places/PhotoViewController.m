@@ -37,9 +37,21 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
+        self.hidesBottomBarWhenPushed = YES;
     }
     return self;
 }
+
+- (id)init
+{
+    self = [super init];
+    if (self) {
+        // Custom initialization
+        self.hidesBottomBarWhenPushed = YES;
+    }
+    return self;
+}
+
 
 - (void)didReceiveMemoryWarning
 {
@@ -64,8 +76,11 @@
 // Implement loadView to create a view hierarchy programmatically, without using a nib.
 - (void)loadView
 {
+    // Create an Image    
     UIImage *image = [UIImage imageWithData:self.photoData];
     self.imageView = [[UIImageView alloc] initWithImage:image];
+    
+    // Put it in Scroll View and set the initial zoom and positioning
     CGRect applicationFrame = [[UIScreen mainScreen] applicationFrame];
     UIScrollView *scrollView = [[UIScrollView alloc] initWithFrame:applicationFrame];
     scrollView.contentSize = image.size;

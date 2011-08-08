@@ -1,10 +1,6 @@
 
-- Create recents property list
-  - recent PHOTOS
-  - no dupes
-  - most recent at top
-  - Limit recents to a reasonable number
-  - save in NSUserDefaults
+
+- Prevent dupes for recents property list
 
 - Create RecentPhotosTableViewController
 
@@ -14,8 +10,6 @@
 - support ipad
 
 - Photos should have title
-
-- When navigating to Photos, should hide the tab controller
 
 - Refactor API calls in TopPlacesTableViewController.populateCell
 
