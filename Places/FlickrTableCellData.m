@@ -93,4 +93,9 @@
     return flickrInfo;
 }
 
++ (BOOL)isSamePhoto:(FlickrPhotoReference *)photo as:(FlickrPhotoReference *)otherPhoto
+{
+    return [(NSString *)[photo objectForKey:PHOTO_ID] isEqualToString:(NSString *)[otherPhoto objectForKey:PHOTO_ID]];
+}
+
 @end

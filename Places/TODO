@@ -14,3 +14,7 @@
 - Refactor API calls in TopPlacesTableViewController.populateCell
 
 - Refactor to combine common code between RecentPhotosTableViewController and PlacePhotosTableViewController
+
+- Bug: recents doesn't get updated unless you restart the app
+
+- Bug: Recents showing wrong picture on the iphone

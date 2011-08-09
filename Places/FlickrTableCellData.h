@@ -20,5 +20,6 @@
 + (NSString *)placeId:(FlickrPlace *)place;
 + (void)populateCell:(UITableViewCell *)cell forPhotoReference:(FlickrPhotoReference *)photo;
 + (FlickrInfo *)flickrInfo:(FlickrPhotoReference *)photo;
++ (BOOL)isSamePhoto:(FlickrPhotoReference *)photo as:(FlickrPhotoReference *)otherPhoto;
 
 @end
